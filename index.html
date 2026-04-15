@@ -25,15 +25,19 @@ body {
   font-weight: 300; min-height: 100vh;
 }
 
-/* 💡 HERO 영역 최적화 (사진 잘림 방지 & 텍스트 오버레이) */
-.hero {position: relative;background: #000;padding: 0;overflow: hidden; height: 420px; display: flex; align-items: center;}
-.hero-banner {position: absolute; right: 0; top: 0; width: 100%; height: 100%; object-fit: contain; object-position: right top; opacity: 0.8;}
-.hero-overlay {position: relative; z-index: 10; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%); display: flex; flex-direction: column; justify-content: center; padding: 0 40px;}
+/* 💡 HERO 영역 최적화 (사진 잘림 방지 & 영문 텍스트 적용) */
+.hero {position: relative;background: #000;padding: 0;overflow: hidden; height: 450px; display: flex; align-items: center;}
+/* PC 환경에서는 사진이 오른쪽에 치우치게 하여 텍스트와 겹치지 않게 합니다 */
+.hero-banner {position: absolute; right: 5%; top: 0; width: auto; height: 100%; object-fit: contain; object-position: right top; opacity: 0.9;}
+.hero-overlay {position: relative; z-index: 10; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%); display: flex; flex-direction: column; justify-content: center; padding: 0 50px;}
+
 .hero-label {font-family: 'MBK CorpoA', 'Cormorant Garamond', serif;font-size: .85rem;letter-spacing: 3px;color: #ccc;text-transform: uppercase;margin-bottom: 10px;}
 .hero-title {font-family: 'MBK CorpoA Cond', 'Playfair Display', serif;font-size: clamp(2rem, 5vw, 3.2rem);font-weight: 700;color: var(--white);line-height: 1.15;margin-bottom: 8px;}
 .hero-title span { color: #fff; }
-.hero-sub {font-size: .9rem;color: #fff;font-weight: 400;letter-spacing: .5px;}
-.hero-date {margin-top: 14px;font-family: 'MBK CorpoA', 'Outfit', sans-serif;font-size: .75rem;color: #777;letter-spacing: 1px;}
+.hero-sub {font-family: 'MBK CorpoA', 'Outfit', sans-serif;font-size: .9rem;color: #fff;font-weight: 400;letter-spacing: .5px; margin-bottom: 20px;}
+
+/* 우측 상단 연락처 배너 */
+.contact-badge {position: absolute; right: 50px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 10px 20px; border-radius: 30px; font-family: 'MBK CorpoA', 'Outfit', sans-serif; color: #fff; font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: 10px; z-index: 20; backdrop-filter: blur(5px);}
 
 /* NAV */
 .sticky-nav {position: sticky;top: 0;z-index: 100;background: rgba(10,10,10,.95);backdrop-filter: blur(12px);border-bottom: 1px solid rgba(255,255,255,.1);border-top: 1px solid rgba(255,255,255,.1);padding: 0 20px;overflow-x: auto;white-space: nowrap;-webkit-overflow-scrolling: touch;}
@@ -98,13 +102,15 @@ body {
 .scroll-top {position: fixed;bottom: 24px;right: 24px;width: 40px;height: 40px;background: rgba(255,255,255,.1);border: 1px solid rgba(255,255,255,.2);border-radius: 50%;display: flex;align-items: center;justify-content: center;cursor: pointer;color: #fff;font-size: 1rem;transition: all .2s;z-index: 200;}
 .scroll-top:hover { background: rgba(255,255,255,.25); }
 
-/* 모바일 최적화 (사진 얼굴 위주로 자연스럽게 배치) */
-@media (max-width: 600px) {
+/* 💡 모바일 최적화 (사진 중앙 배치 & 연락처 배너 숨김) */
+@media (max-width: 800px) {
   .mb-only { display: inline; }
-  .hero { height: 400px; display: block; }
-  .hero-banner { object-fit: cover; object-position: center 10%; opacity: 0.55; }
-  .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,1) 100%); justify-content: flex-end; padding: 0 20px 30px; }
-  .hero-title { font-size: 1.8rem; }
+  .hero { height: 420px; display: block; }
+  .hero-banner { right: 0; width: 100%; object-fit: cover; object-position: center 15%; opacity: 0.8; }
+  .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,1) 100%); justify-content: flex-end; padding: 0 20px 30px; }
+  .hero-title { font-size: 1.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+  .hero-label, .hero-sub { text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+  .contact-badge { display: none; } /* 모바일에서는 하단 CTA 버튼이 있으므로 배너 숨김 */
   
   .content { padding: 24px 14px 60px; }
   .cta-bar { flex-direction: column; align-items: flex-start; }
@@ -127,11 +133,11 @@ body {
 <div class="hero">
   <img class="hero-banner" src="IMG_4590.jpg" alt="권혁 과장">
   <div class="hero-overlay">
-    <div class="hero-label">Mercedes-Benz Official Dealer</div>
+    <div class="hero-label">MERCEDES-BENZ OFFICIAL PARTNER</div>
     <div class="hero-title">가격 및 <span>프로모션</span></div>
-    <div class="hero-sub">벤츠 KCC오토 금천 멀티센터 · 권혁 과장</div>
-    <div class="hero-date">2026.04 기준 / VAT 포함 / 단위: 원</div>
+    <div class="hero-sub">Mercedes-Benz KCC Auto Geumcheon Multi-Center · 권혁 과장</div>
   </div>
+  <div class="contact-badge">📞 010-9081-0058 상담 문의</div>
 </div>
 
 <nav class="sticky-nav">
@@ -437,13 +443,13 @@ body {
       <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
       <thead><tr class="thead-row"><th>모델명</th><th class="th-right">권장 소비자가격</th><th class="th-center">프로모션</th><th class="th-right">실구매가</th></tr></thead>
       <tbody>
-        <tr><td class="model-name">Mercedes-Maybach S 580</td><td class="price-val">315,600,000<span class="price-unit">원</span></td><td class="discount-cell">9%</td><td class="real-val">287,190,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach S 680</td><td class="price-val">401,600,000<span class="price-unit">원</span></td><td class="discount-cell">9%</td><td class="real-val">365,450,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach S 680 "V12 Edition"</td><td class="price-val">478,000,000<span class="price-unit">원</span></td><td class="discount-cell">-</td><td class="real-val">478,000,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach SL 680</td><td class="price-val">342,600,000<span class="price-unit">원</span></td><td class="discount-cell">2%</td><td class="real-val">335,740,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach GLS 600</td><td class="price-val">293,600,000<span class="price-unit">원</span></td><td class="discount-cell">6%</td><td class="real-val">275,980,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach GLS 600 MANUFAKTUR</td><td class="price-val">335,600,000<span class="price-unit">원</span></td><td class="discount-cell">6%</td><td class="real-val">315,460,000<span class="price-unit">원</span></td></tr>
-        <tr><td class="model-name">Mercedes-Maybach EQS 680 SUV</td><td class="price-val">233,600,000<span class="price-unit">원</span></td><td class="discount-cell">-</td><td class="real-val">233,600,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach S 580</td><td class="price-val">315,600,000<span class="price-unit">원</span></td><td class="discount-cell">9%</td><td class="real-val">287,190,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach S 680</td><td class="price-val">401,600,000<span class="price-unit">원</span></td><td class="discount-cell">9%</td><td class="real-val">365,450,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach S 680 "V12 Edition"</td><td class="price-val">478,000,000<span class="price-unit">원</span></td><td class="discount-cell">-</td><td class="real-val">478,000,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach SL 680</td><td class="price-val">342,600,000<span class="price-unit">원</span></td><td class="discount-cell">2%</td><td class="real-val">335,740,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach GLS 600</td><td class="price-val">293,600,000<span class="price-unit">원</span></td><td class="discount-cell">6%</td><td class="real-val">275,980,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach GLS 600 MANUFAKTUR</td><td class="price-val">335,600,000<span class="price-unit">원</span></td><td class="discount-cell">6%</td><td class="real-val">315,460,000<span class="price-unit">원</span></td></tr>
+        <tr class="maybach"><td class="model-name">Mercedes-Maybach EQS 680 SUV</td><td class="price-val">233,600,000<span class="price-unit">원</span></td><td class="discount-cell">-</td><td class="real-val">233,600,000<span class="price-unit">원</span></td></tr>
       </tbody>
     </table>
   </section>
@@ -460,7 +466,6 @@ body {
   </div>
   
   <div class="disclaimer">
-    본 가격표는 2026년 4월 기준 메르세데스-벤츠 코리아 공식 소비자 가격입니다.<br>
     가격은 VAT 포함이며 사전 예고 없이 변경될 수 있습니다.<br>
     개별 할인·프로모션·금융 조건은 현재 재고 상황에 따라 다를 수 있으니 별도 문의 바랍니다.
   </div>
