@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>벤츠 가격 및 프로모션 2026 | 권혁 과장</title>
+<title>2026년 6월 벤츠 가격 및 프로모션 | 권혁 과장</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;700;900&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -60,71 +60,54 @@ body {
   background: var(--navy);
   padding: 0;
   overflow: hidden;
-  height: 450px;
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid rgba(124,196,255,.25);
 }
 .hero-banner {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 55%;
-  height: 100%;
+  width: 100%;
+  height: 450px;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center;
+  display: block;
   opacity: 0.85;
 }
 .hero-overlay {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #000 0%, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13,15,20,0) 0%, rgba(13,15,20,0) 35%, rgba(13,15,20,.7) 65%, rgba(13,15,20,.95) 100%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 5%;
+  justify-content: flex-end;
+  padding: 0 40px 28px;
 }
 .hero-label {
   font-family: 'MBK CorpoA', 'Cormorant Garamond', serif;
-  font-size: .85rem;
+  font-size: .8rem;
   letter-spacing: 3px;
   color: var(--sky);
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .hero-title {
   font-family: 'MBK CorpoA Cond', 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 700;
   color: var(--white);
   line-height: 1.15;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .hero-title span { color: var(--sky); }
 .hero-sub {
-  font-family: 'MBK CorpoA', 'Outfit', sans-serif;
-  font-size: .9rem;
+  font-size: .85rem;
   color: var(--silver);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: .5px;
-  margin-bottom: 20px;
 }
-.contact-badge {
-  background: rgba(201,169,110,0.1); 
-  border: 1px solid rgba(201,169,110,0.3); 
-  padding: 10px 22px; 
-  border-radius: 30px; 
-  font-family: 'MBK CorpoA', 'Outfit', sans-serif; 
-  color: var(--gold); 
-  font-size: 1.05rem; 
-  font-weight: 600; 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 8px; 
-  width: max-content;
-  backdrop-filter: blur(5px);
+.hero-date {
+  margin-top: 10px;
+  font-family: 'MBK CorpoA', 'Outfit', sans-serif;
+  font-size: .75rem;
+  color: var(--sky-dim);
+  letter-spacing: 1px;
 }
 
 /* NAV */
@@ -159,6 +142,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: color .2s, border-color .2s;
   white-space: nowrap;
+  text-decoration: none;
 }
 .nav-btn:hover, .nav-btn.active {
   color: var(--gold);
@@ -194,6 +178,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  color: #fff;
   flex-shrink: 0;
 }
 .section-title {
@@ -210,1202 +195,1436 @@ body {
   text-transform: uppercase;
 }
 
-/* SUBSECTION */
-.sub-section { margin-bottom: 24px; }
-.sub-label {
-  font-family: 'MBK CorpoA', 'Outfit', sans-serif;
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--gold-dim);
-  letter-spacing: 2px;
+/* === 6월 재구성: 추가할인 공통 박스 === */
+.extra-promo {
+  margin: 0 auto 24px; max-width: 1240px;
+  border: 1px solid rgba(124,196,255,.35); border-radius: 16px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, rgba(124,196,255,.06) 0%, rgba(201,169,110,.04) 100%);
+}
+.extra-promo .ep-head {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 14px; padding-bottom: 12px;
+  border-bottom: 1px solid rgba(124,196,255,.18);
+}
+.extra-promo .ep-tag {
+  background: #7cc4ff; color: #0d0f14;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-size: .68rem; font-weight: 700; letter-spacing: 1px;
+  padding: 4px 10px; border-radius: 4px;
+}
+.extra-promo .ep-title {
+  font-family: 'MBK CorpoA Cond','Playfair Display',serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--white);
+}
+.extra-promo .ep-note { margin-left: auto; font-size: .72rem; color: var(--silver); }
+.extra-promo .ep-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 14px; }
+.extra-promo .ep-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 10px;
+}
+.extra-promo .ep-item .ep-val {
+  flex-shrink: 0;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-weight: 700; font-size: .95rem; color: #7cc4ff;
+  min-width: 42px; text-align: center; line-height: 1.3;
+}
+.extra-promo .ep-item.gold .ep-val { color: var(--gold); }
+.extra-promo .ep-item .ep-text { font-size: .78rem; color: var(--light); line-height: 1.5; }
+.extra-promo .ep-item .ep-text b { color: var(--white); font-weight: 500; }
+.extra-promo .ep-item .ep-text .ep-meta { display: block; color: var(--silver); font-size: .68rem; margin-top: 2px; }
+
+/* === 핵심 강조 = 벤츠파이낸셜 캠페인 === */
+.finance-spotlight {
+  margin: 0 auto 32px; max-width: 1240px;
+  border-radius: 18px; padding: 26px 28px;
+  background:
+    radial-gradient(800px 200px at 0% 0%, rgba(201,169,110,.15) 0%, transparent 60%),
+    radial-gradient(800px 200px at 100% 100%, rgba(124,196,255,.12) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(28,33,51,.9), rgba(20,24,36,.95));
+  border: 1px solid rgba(201,169,110,.5);
+  box-shadow: 0 8px 40px rgba(0,0,0,.4);
+}
+.finance-spotlight .fs-tag {
+  display: inline-block; background: var(--gold); color: #0d0f14;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-size: .7rem; font-weight: 700; letter-spacing: 1.5px;
+  padding: 5px 12px; border-radius: 4px; margin-bottom: 12px;
+}
+.finance-spotlight h3 {
+  font-family: 'MBK CorpoA Cond','Playfair Display',serif;
+  font-size: 1.5rem; color: var(--white); margin-bottom: 6px;
+}
+.finance-spotlight .fs-desc { font-size: .85rem; color: var(--silver); line-height: 1.6; margin-bottom: 16px; }
+.finance-spotlight .fs-models { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.finance-spotlight .fs-chip {
+  background: rgba(201,169,110,.12);
+  border: 1px solid rgba(201,169,110,.35);
+  color: var(--gold-light);
+  font-size: .72rem; font-weight: 500;
+  padding: 4px 10px; border-radius: 100px;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+}
+.finance-spotlight .fs-chip strong { color: var(--gold); }
+
+/* === 가격 테이블 5컬럼 === */
+.table-wrap { overflow-x: auto; }
+.price-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.col-name { width: auto; }
+.col-msrp { width: 16%; }
+.col-base { width: 17%; }
+.col-fin  { width: 21%; }
+.col-real { width: 18%; }
+.price-table thead th {
+  padding: 10px 8px; font-size: .68rem; letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding: 4px 0 4px 10px;
-  border-left: 2px solid var(--gold-dim);
+  color: var(--silver); font-weight: 500;
+  border-bottom: 1px solid rgba(201,169,110,.25);
+  text-align: right;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
 }
-
-/* PRICE TABLE */
-.price-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-.price-table col.col-name { width: auto; }
-.price-table col.col-msrp { width: 22%; }
-.price-table col.col-disc { width: 14%; }
-.price-table col.col-real { width: 22%; }
-.price-table tr { border-bottom: 1px solid rgba(255,255,255,.05); transition: background .15s; }
-.price-table tr:hover { background: rgba(201,169,110,.04); }
-.price-table td { padding: 10px 12px; vertical-align: middle; }
-.model-name { font-size: .88rem; color: var(--light); font-weight: 300; line-height: 1.4; }
-.model-name .trim { font-size: .75rem; color: var(--silver); font-weight: 200; }
-.price-val { font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-size: .95rem; font-weight: 600; color: var(--gold); text-align: right; white-space: nowrap; text-shadow: 0 0 20px rgba(201,169,110,.2); }
-.price-unit { font-size: .72rem; color: var(--gold-dim); font-weight: 400; margin-left: 2px; }
-
-/* AMG / Maybach 강조 */
-.amg .model-name { color: #d4a0a0; }
-.amg .price-val { color: #c98080; }
-.maybach .model-name { color: #a0b4d4; }
-.maybach .price-val { color: #8099c9; }
-.eq .model-name { color: #90c4a0; }
-.eq .price-val { color: #70a880; }
-
-.price-table thead tr.thead-row { border-bottom: 1px solid rgba(201,169,110,.3); }
-.price-table thead th { font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-size: .68rem; font-weight: 600; color: var(--gold-dim); letter-spacing: 1.2px; text-transform: uppercase; padding: 12px 12px; text-align: left; }
-.price-table thead th.th-right { text-align: right; }
-.price-table thead th.th-center { text-align: center; }
-.discount-cell { font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-size: .85rem; font-weight: 600; color: #e07b7b; text-align: center; white-space: nowrap; }
-.real-val { font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-size: .98rem; font-weight: 700; color: var(--white); text-align: right; white-space: nowrap; text-shadow: 0 0 18px rgba(255,255,255,.12); }
-.real-val .price-unit { color: var(--silver); font-weight: 400; }
-.amg .real-val { color: #e8c0c0; }
-.maybach .real-val { color: #c0d0e8; }
-.eq .real-val { color: #b0d8b8; }
-
-/* 추가 혜택 박스 */
-.extra-notice {
-  background: linear-gradient(135deg, rgba(201,169,110,.18), rgba(201,169,110,.06));
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 20px 24px;
-  margin-bottom: 36px;
-  box-shadow: 0 0 24px rgba(201,169,110,.15);
+.price-table thead th.c-name { text-align: left; }
+.price-table thead th.c-fin .fin-h {
+  display: inline-block; background: var(--gold); color: #0d0f14;
+  padding: 3px 8px; border-radius: 4px;
+  font-size: .68rem; font-weight: 700; letter-spacing: .5px;
 }
-.extra-title {
-  font-family: 'MBK CorpoA Cond', 'Playfair Display', serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 14px;
-  letter-spacing: .3px;
+.price-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: background .2s;
 }
-.extra-item {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  align-items: center;
-  gap: 16px;
-  margin-top: 12px;
-  font-size: .82rem;
-  color: var(--light);
-  line-height: 1.7;
+.price-table tbody tr:hover { background: rgba(255,255,255,.025); }
+.price-table tbody tr.has-fin {
+  background: rgba(201,169,110,.05);
+  border-left: 3px solid var(--gold);
 }
-.extra-tag {
-  font-family: 'MBK CorpoA', 'Outfit', sans-serif;
-  font-size: .68rem;
-  font-weight: 700;
-  color: var(--dark);
-  background: var(--gold);
-  padding: 6px 10px;
-  border-radius: 4px;
-  letter-spacing: .8px;
+.price-table tbody tr.has-fin:hover { background: rgba(201,169,110,.08); }
+.price-table td { padding: 12px 8px; text-align: right; vertical-align: middle; }
+.price-table td.c-name { text-align: left; line-height: 1.4; }
+.price-table .m-main { display: block; color: var(--light); font-weight: 400; font-size: .92rem; }
+.price-table .m-sub  { display: block; color: var(--gold-dim); font-size: .68rem; margin-top: 3px; letter-spacing: .3px; }
+.price-table td small { font-size: .68rem; color: var(--silver); margin-left: 2px; font-weight: 400; }
+
+.price-table .c-msrp { color: var(--silver); font-family: 'MBK CorpoA','Outfit',sans-serif; }
+.price-table .c-base .pct, .price-table .c-fin .pct {
+  display: inline-block; min-width: 38px; text-align: center;
+  padding: 2px 7px; border-radius: 4px; margin-right: 6px;
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-size: .8rem; font-weight: 700;
+}
+.price-table .c-base .pct { background: rgba(224,123,123,.12); color: #e07b7b; }
+.price-table .c-fin  .pct.fin { background: var(--gold); color: #0d0f14; }
+.price-table .pct.dim { background: transparent; color: var(--silver); opacity: .3; }
+.price-table .amt {
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-size: .82rem; color: #e07b7b;
+}
+.price-table .amt.fin { color: var(--gold); font-weight: 600; }
+.price-table .amt.dim { color: var(--silver); opacity: .35; }
+.price-table .c-real {
+  font-family: 'MBK CorpoA','Outfit',sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--white);
+  text-shadow: 0 0 20px rgba(255,255,255,.14);
   white-space: nowrap;
-  text-align: center;
 }
-.extra-desc { display: block; }
-.extra-desc strong { color: var(--gold-light); font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-weight: 700; }
-.mb-only { display: none; }
+.price-table tr.amg .m-main { color: #d4a0a0; }
+.price-table tr.amg .c-real { color: #f0d0d0; }
+.price-table tr.maybach .m-main { color: #a0b4d4; }
+.price-table tr.maybach .c-real { color: #d8e0f0; }
+.price-table tr.eq .m-main { color: #90c4a0; }
+.price-table tr.eq .c-real { color: #c8e8d0; }
+.price-table tr.rof .m-main { color: var(--gold-light); }
 
-/* CTA */
-.cta-bar { background: var(--card); border: 1px solid rgba(201,169,110,.2); border-radius: 12px; padding: 24px 28px; margin-top: 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.cta-text .t1 { font-family: 'MBK CorpoA Cond', 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 4px; }
-.cta-text .t2 { font-size: .8rem; color: var(--silver); font-weight: 200; }
-.cta-links { display: flex; gap: 10px; flex-wrap: wrap; }
-.cta-btn { font-family: 'MBK CorpoA', 'Outfit', sans-serif; font-size: .78rem; font-weight: 600; padding: 9px 18px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(201,169,110,.4); color: var(--gold); background: rgba(201,169,110,.08); transition: all .2s; white-space: nowrap; }
-.cta-btn:hover { background: rgba(201,169,110,.18); border-color: var(--gold); }
+/* ===== CTA: 전략적 구매 자문 ===== */
+.bd-cta { background: linear-gradient(180deg, #0a0c14 0%, #11141d 100%); padding: 64px 24px; border-top: 1px solid rgba(201,169,110,.2); border-bottom: 1px solid rgba(201,169,110,.2); margin-top: 40px; }
+.bd-cta-card { max-width: 1100px; margin: 0 auto; background: linear-gradient(135deg, #14171f 0%, #1a1d28 100%); border: 1px solid rgba(201,169,110,.18); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 280px 1fr; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+.bd-cta-portrait { position: relative; background: #1a1820; overflow: hidden; min-height: 360px; }
+.bd-cta-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.bd-cta-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(8,9,14,.92) 100%); }
+.bd-cta-portrait-caption { position: absolute; bottom: 16px; left: 16px; right: 16px; z-index: 2; text-align: center; }
+.bd-cta-portrait-caption .small { display: block; font-size: 9.5px; letter-spacing: 2.5px; color: #c9a96e; text-transform: uppercase; margin-bottom: 3px; }
+.bd-cta-portrait-caption .name { font-size: 14px; font-weight: 600; color: #f5f5f7; letter-spacing: .3px; }
+.bd-cta-body { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+.bd-cta-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 10.5px; letter-spacing: 4px; color: #c9a96e; text-transform: uppercase; margin-bottom: 16px; }
+.bd-cta-eyebrow::before { content: ''; width: 22px; height: 1px; background: #c9a96e; }
+.bd-cta-title { font-size: clamp(20px, 2.2vw, 26px); font-weight: 500; color: #f5f5f7; line-height: 1.5; margin: 0 0 14px; }
+.bd-cta-title b { font-weight: 700; color: #ddc08a; }
+.bd-cta-desc { font-size: 13.5px; color: #b8b9bd; line-height: 1.75; margin: 0 0 22px; }
+.bd-cta-meta { display: flex; gap: 24px; padding: 14px 0; margin-bottom: 22px; border-top: 1px solid rgba(201,169,110,.2); border-bottom: 1px solid rgba(201,169,110,.2); }
+.bd-cta-meta-item { display: flex; flex-direction: column; gap: 3px; }
+.bd-cta-meta-num { font-size: 17px; font-weight: 600; color: #c9a96e; letter-spacing: .3px; }
+.bd-cta-meta-label { font-size: 10.5px; color: #888; letter-spacing: .5px; }
+.bd-cta-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.bd-cta-btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 26px; border-radius: 40px; font-size: 13px; font-weight: 600; letter-spacing: .6px; text-decoration: none; transition: all .25s; }
+.bd-cta-btn.primary { background: #c9a96e; color: #08090e; border: 1px solid #c9a96e; }
+.bd-cta-btn.primary:hover { background: #ddc08a; border-color: #ddc08a; transform: translateY(-1px); }
+.bd-cta-btn.ghost { background: transparent; color: #c9a96e; border: 1px solid #8a7a50; }
+.bd-cta-btn.ghost:hover { border-color: #c9a96e; background: rgba(201,169,110,.08); }
 
-/* DISCLAIMER */
-.disclaimer { text-align: center; font-size: .72rem; color: var(--gold-dim); margin-top: 32px; font-weight: 200; line-height: 1.8; }
+/* ===== CONTACT ===== */
+.contact { background: radial-gradient(ellipse at 50% 50%, rgba(201,169,110,.04), transparent 60%), var(--dark); text-align: center; padding: 80px 30px; }
+.co-badge { font-family: 'MBK CorpoA', serif; font-size: .7rem; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
+.co-name { font-family: 'MBK CorpoA Cond', serif; font-size: 2.2rem; color: var(--white); margin-bottom: 4px; }
+.co-title { font-size: .85rem; color: var(--silver); margin-bottom: 40px; }
+.co-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 700px; margin: 0 auto 40px; }
+.co-card { background: var(--card); border: 1px solid rgba(255,255,255,.05); border-radius: 12px; padding: 24px 16px; text-decoration: none; transition: all .3s; display: block; }
+.co-card:hover { border-color: rgba(201,169,110,.3); transform: translateY(-3px); }
+.co-card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.co-card-label { font-size: .68rem; color: var(--gold); letter-spacing: 1px; margin-bottom: 4px; }
+.co-card-val { font-size: .78rem; color: var(--silver); }
 
-/* SCROLL TOP */
-.scroll-top { position: fixed; bottom: 24px; right: 24px; width: 40px; height: 40px; background: rgba(201,169,110,.15); border: 1px solid rgba(201,169,110,.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--gold); font-size: 1rem; transition: all .2s; z-index: 200; }
-.scroll-top:hover { background: rgba(201,169,110,.3); }
+/* Floating Kakao CTA */
+.float-kakao { position: fixed; bottom: 22px; right: 22px; z-index: 9000; display: flex; align-items: center; gap: 10px; padding: 12px 20px 12px 16px; background: #FEE500; color: #181600; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); font-weight: 700; transition: all .2s; }
+.float-kakao:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.4); }
 
-@media (max-width: 800px) {
-  .mb-only { display: inline; }
-  .hero { height: 420px; display: block; }
-  .hero-banner { right: 0; width: 100%; object-fit: cover; object-position: center 15%; opacity: 0.8; }
-  .hero-overlay { padding: 0 20px 30px; background: linear-gradient(to bottom, rgba(13,15,20,0) 0%, rgba(13,15,20,0) 40%, rgba(13,15,20,.85) 75%, rgba(13,15,20,1) 100%); justify-content: flex-end;}
-  .hero-title { font-size: 1.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-  .hero-label, .hero-sub { text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
-  .contact-badge { display: none; }
+@media (max-width: 820px) {
+  .price-table { font-size: .72rem; }
+  .price-table td { padding: 10px 5px; }
+  .price-table thead th { font-size: .58rem; padding: 8px 4px; }
+  .price-table .m-main { font-size: .78rem; }
+  .price-table .m-sub { font-size: .6rem; }
+  .price-table .c-real { font-size: .82rem; }
+  .price-table td small { font-size: .58rem; }
+  .price-table .c-base .pct, .price-table .c-fin .pct { min-width: 30px; padding: 2px 4px; font-size: .68rem; margin-right: 3px; }
+  .price-table .amt { font-size: .68rem; }
+  .extra-promo { padding: 16px 14px; }
+  .extra-promo .ep-grid { grid-template-columns: 1fr; }
+  .finance-spotlight { padding: 18px 16px; }
+  .finance-spotlight h3 { font-size: 1.15rem; }
+  .bd-cta-card { grid-template-columns: 1fr; }
+  .bd-cta-portrait { min-height: 280px; }
+  .co-grid { grid-template-columns: 1fr; }
+  .hero-banner { height: 340px; }
+  .hero-title { font-size: 1.8rem; }
   .content { padding: 24px 14px 60px; }
-  .cta-bar { flex-direction: column; align-items: flex-start; }
-  .price-val { font-size: .85rem; }
-  .model-name { font-size: .82rem; }
-  .price-table td, .price-table th { padding: 8px 6px; }
-  .price-table thead th { font-size: .6rem; letter-spacing: .8px; }
-  .real-val, .price-val { font-size: .78rem; }
-  .model-name { font-size: .76rem; }
-  .discount-cell { font-size: .78rem; }
-  .price-unit { display: none; }
-  .extra-notice { padding: 16px 14px; }
-  .extra-item { grid-template-columns: 1fr; gap: 6px; font-size: .78rem; }
-  .extra-tag { justify-self: start; }
 }
+
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero">
-  <img class="hero-banner" src="IMG_4590.jpg" alt="권혁 과장">
+  <img class="hero-banner" src="금천센터.png" alt="벤츠 금천 멀티센터">
   <div class="hero-overlay">
     <div class="hero-label">MERCEDES-BENZ OFFICIAL PARTNER</div>
-    <div class="hero-title">가격 및 <span>프로모션</span></div>
-    <div class="hero-sub">Mercedes-Benz KCC Auto Geumcheon Multi-Center · 권혁 과장</div>
-    <div class="contact-badge">📞 010-9081-0058 상담 문의</div>
+    <div class="hero-title">벤츠 가격 &amp; <span>6월 프로모션</span></div>
+    <div class="hero-sub">KCC오토 금천 멀티센터 · 권혁 과장</div>
+    <div class="hero-date">2026.06 기준 / VAT 포함 / 만원 단위</div>
   </div>
 </div>
 
+<!-- STICKY NAV -->
 <nav class="sticky-nav">
   <div class="nav-inner">
-    <button class="nav-btn active" onclick="scrollToId('sec_MayHot')">5월 베스트 5</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Finance')">5월 금융</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Aclass')">A클래스</button>
-    <button class="nav-btn" onclick="scrollToId('sec_CLA')">CLA</button>
-    <button class="nav-btn" onclick="scrollToId('sec_GLA_GLB')">GLA·GLB</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Cclass')">C클래스</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Eclass')">E클래스</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Sclass')">S클래스</button>
-    <button class="nav-btn" onclick="scrollToId('sec_CLE')">CLE</button>
-    <button class="nav-btn" onclick="scrollToId('sec_GLC')">GLC</button>
-    <button class="nav-btn" onclick="scrollToId('sec_GLE')">GLE</button>
-    <button class="nav-btn" onclick="scrollToId('sec_GLS')">GLS</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Gclass')">G클래스</button>
-    <button class="nav-btn" onclick="scrollToId('sec_AMG_GT_SL')">AMG GT·SL</button>
-    <button class="nav-btn" onclick="scrollToId('sec_전동화_EQ')">전동화 EQ</button>
-    <button class="nav-btn" onclick="scrollToId('sec_Maybach')">Maybach</button>
-  </div>
+<a href="#sec_A" class="nav-btn">A클래스</a>
+<a href="#sec_CLA" class="nav-btn">CLA</a>
+<a href="#sec_GLA_GLB" class="nav-btn">GLA · GLB</a>
+<a href="#sec_C" class="nav-btn">C클래스</a>
+<a href="#sec_E" class="nav-btn">E클래스</a>
+<a href="#sec_S" class="nav-btn">S클래스</a>
+<a href="#sec_CLE" class="nav-btn">CLE · AMG GT · SL</a>
+<a href="#sec_GLC" class="nav-btn">GLC</a>
+<a href="#sec_GLE" class="nav-btn">GLE</a>
+<a href="#sec_GLS_G" class="nav-btn">GLS · G클래스</a>
+<a href="#sec_EQ" class="nav-btn">전동화 EQ</a>
+</div>
 </nav>
 
 <div class="content">
-  <p style="text-align:center;font-size:.85rem;color:var(--silver);margin-bottom:32px;line-height:1.75;font-weight:500;">
-    아래 가격은 매월 갱신되는 메르세데스-벤츠 코리아 공식 캠페인 기준이며,<br class="mb-only"> <strong style="color:var(--white);">계약 시점</strong>의 프로모션이 적용됩니다.<br>
-    계약 시점의 조건은 출고 시점에도 동일하게 유지되며,<br class="mb-only"> 이후 가격이 인상되더라도 계약 조건으로 출고 가능합니다.
+
+<p style="text-align:center;color:var(--silver);font-size:.78rem;margin:18px auto 22px;max-width:1200px;line-height:1.55">
+  ※ 본 페이지는 2026년 6월 메르세데스-벤츠 코리아 공식 프로모션 기준입니다. 표시 가격은 모두 <b style="color:var(--light)">VAT 포함, 만원 단위 절삭</b>이며, 옵션·재고 상황에 따라 실제 견적과 차이가 있을 수 있습니다.
+</p>
+
+<div class="finance-spotlight">
+  <span class="fs-tag">JUNE SPOTLIGHT · 핵심 캠페인</span>
+  <h3>메르세데스 벤츠 파이낸셜 &amp; 모빌리티 조인트 캠페인 ─ 이번 달의 무기</h3>
+  <p class="fs-desc">
+    6월은 <b style="color:var(--gold-light)">메르세데스 벤츠 파이낸셜(MBFSK)과 벤츠 모빌리티(MBMK)의 조인트 캠페인(MBM JC)</b>이 강력합니다. 아래 모델은 기본 현금할인에 더해 <b style="color:var(--gold-light)">해당 금융상품 이용 시 +4% ~ +7%의 추가할인이 중첩 적용</b>됩니다. 표 안에서 <span class="fs-chip" style="display:inline-block;padding:1px 8px;margin:0 2px;font-size:.7rem">금색 강조</span> 표시된 행이 해당 모델입니다.
   </p>
-
-  <div class="extra-notice">
-    <div class="extra-title">공통 추가 할인 적용 안내</div>
-    <div class="extra-item"><span class="extra-tag">재구매 고객</span><span class="extra-desc">벤츠 재구매 고객 — AMG · Maybach · S-Class · G-Class <strong>+2%</strong><br>그 외 모든 차량 <strong>+1%</strong></span></div>
-    <div class="extra-item"><span class="extra-tag">타 브랜드 보유</span><span class="extra-desc">GLC · GLE 구매 시 — BMW · Audi · Genesis · Volvo · Porsche · Land Rover 등<br>타 브랜드 보유 고객 <strong>+1%</strong></span></div>
-    <div class="extra-item"><span class="extra-tag">트레이드인</span><span class="extra-desc"><span style="font-size:.66rem;color:var(--gold);font-weight:600;letter-spacing:.5px;margin-right:8px">5월 재시행</span>전 차종 트레이드인(중고차 매각 동시 진행) 시 — 모든 차량 <strong>+1%</strong> · 타 프로모션과 중복 가능</span></div>
-    <div class="extra-item"><span class="extra-tag">전시차량</span><span class="extra-desc"><span style="font-size:.66rem;color:var(--gold);font-weight:600;letter-spacing:.5px;margin-right:8px">NEW</span>전시차 즉시 출고 가능 시 — <strong>+1%</strong> 추가 할인</span></div>
-    <div class="extra-item"><span class="extra-tag">하자수리/하이마일리지</span><span class="extra-desc">하자수리 보증 연장 · 하이마일리지 해당 시 — 각 <strong>+1%</strong> 추가</span></div>
+  <div class="fs-models">
+    <span class="fs-chip"><strong>C 200 AV / AMG Line</strong> +4%</span>
+    <span class="fs-chip"><strong>E 200 EXCLUSIVE</strong> +7%</span>
+    <span class="fs-chip"><strong>E 200 AMG (+RoF)</strong> +4%</span>
+    <span class="fs-chip"><strong>E 300 EX / AMG / 140주년</strong> +4%</span>
+    <span class="fs-chip"><strong>S 450 SWB</strong> +4% (+운용리스 6%)</span>
+    <span class="fs-chip"><strong>GLC 300 AV / Coupé AV</strong> +4%</span>
+    <span class="fs-chip"><strong>GLE 450 / AMG / Coupé / Coupé AMG</strong> +4%</span>
   </div>
-
-  <section class="section" id="sec_MayHot" style="border:1px solid rgba(201,169,110,.18);border-radius:14px;padding:32px 28px;background:rgba(24,28,40,.4);margin-bottom:32px">
-    <div style="text-align:center;margin-bottom:8px">
-      <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:.7rem;color:var(--gold-dim);letter-spacing:3px;font-weight:600">2026 MAY · KWON HYUK PICKS</p>
-    </div>
-    <h2 style="font-family:'MBK CorpoA Cond','Playfair Display',serif;font-size:1.6rem;color:var(--white);text-align:center;font-weight:700;letter-spacing:-.01em;margin-bottom:10px">권혁 과장이 추천하는 5월 베스트 5</h2>
-    <div style="width:40px;height:1px;background:var(--gold);margin:0 auto 18px"></div>
-    <p style="text-align:center;font-size:.78rem;color:var(--silver);line-height:1.7;max-width:680px;margin:0 auto 28px">5월 시장 흐름 · 26년식 마지막 배치 일정 · 6·7월 입항 물량을 함께 고려한 라인업입니다<br>아래 추가 할인 및 특별 금융 프로그램 중복 적용 가능</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
-      <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:22px 20px;transition:border-color .2s">
-        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-          <span style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:1px">01</span>
-          <span style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600">LAST CHANCE</span>
-        </div>
-        <p style="font-size:.7rem;color:var(--silver);margin-bottom:6px;line-height:1.5">E-Class 엔트리 마지막 기회</p>
-        <h3 style="font-size:.92rem;color:var(--white);font-weight:600;margin-bottom:14px;letter-spacing:-.01em">E 200 AVANTGARDE</h3>
-        <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.05rem;color:var(--gold);line-height:1.3;font-weight:700;margin-bottom:12px">실구매 6,000만원대 중반</p>
-        <p style="font-size:.7rem;color:var(--silver);line-height:1.65">26년식 잔여 재고 소진 임박 · 27년식부터 동일 가격대 진입 불가</p>
-      </div>
-      <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:22px 20px">
-        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-          <span style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:1px">02</span>
-          <span style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600">BEST TIMING</span>
-        </div>
-        <p style="font-size:.7rem;color:var(--silver);margin-bottom:6px;line-height:1.5">프리미엄 SUV · 5월 최고 타이밍</p>
-        <h3 style="font-size:.92rem;color:var(--white);font-weight:600;margin-bottom:14px;letter-spacing:-.01em">GLE 450 4MATIC AMG Line</h3>
-        <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.05rem;color:var(--gold);line-height:1.3;font-weight:700;margin-bottom:12px">6·7월 입항 물량 오픈</p>
-        <p style="font-size:.7rem;color:var(--silver);line-height:1.65">계약 시점 조건이 출고까지 그대로 유지 · 색상·옵션 우선 매칭</p>
-      </div>
-      <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:22px 20px">
-        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-          <span style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:1px">03</span>
-          <span style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600">FINANCE</span>
-        </div>
-        <p style="font-size:.7rem;color:var(--silver);margin-bottom:6px;line-height:1.5">초저금리 · E-Class 상품성 1위</p>
-        <h3 style="font-size:.92rem;color:var(--white);font-weight:600;margin-bottom:14px;letter-spacing:-.01em">E 200 AMG Line</h3>
-        <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.05rem;color:var(--gold);line-height:1.3;font-weight:700;margin-bottom:12px">무이자 0% 할부 적용</p>
-        <p style="font-size:.7rem;color:var(--silver);line-height:1.65">가장 선호도 높은 옵션 구성 · 이자 부담 없는 최고의 기회</p>
-      </div>
-      <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:22px 20px">
-        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-          <span style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:1px">04</span>
-          <span style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600">PREMIUM</span>
-        </div>
-        <p style="font-size:.7rem;color:var(--silver);margin-bottom:6px;line-height:1.5">플래그십 세단의 정석</p>
-        <h3 style="font-size:.92rem;color:var(--white);font-weight:600;margin-bottom:14px;letter-spacing:-.01em">S 450 4MATIC (Long)</h3>
-        <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.05rem;color:var(--gold);line-height:1.3;font-weight:700;margin-bottom:12px">법인 플릿 추가 혜택</p>
-        <p style="font-size:.7rem;color:var(--silver);line-height:1.65">여유로운 재고 상황 · 맞춤형 리스/렌트 최적화 금융 설계</p>
-      </div>
-      <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:22px 20px">
-        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
-          <span style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:1px">05</span>
-          <span style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600">LAST CHANCE</span>
-        </div>
-        <p style="font-size:.7rem;color:var(--silver);margin-bottom:6px;line-height:1.5">5,000~6,000만원대 강력 추천</p>
-        <h3 style="font-size:.92rem;color:var(--white);font-weight:600;margin-bottom:14px;letter-spacing:-.01em">C 200 AVANTGARDE</h3>
-        <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.05rem;color:var(--gold);line-height:1.3;font-weight:700;margin-bottom:12px">금리 1%대 + 11% 할인</p>
-        <p style="font-size:.7rem;color:var(--silver);line-height:1.65">엔트리 세단 가장 매력적 조건 · 27년식 가격 인상 가능성</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="sec_Finance" style="border:1px solid rgba(201,169,110,.18);border-radius:14px;padding:32px 28px;background:rgba(24,28,40,.4);margin-bottom:48px">
-    <div style="text-align:center;margin-bottom:8px">
-      <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:.7rem;color:var(--gold-dim);letter-spacing:3px;font-weight:600">2026 MAY · FINANCE PROGRAM</p>
-    </div>
-    <h2 style="font-family:'MBK CorpoA Cond','Playfair Display',serif;font-size:1.6rem;color:var(--white);text-align:center;font-weight:700;letter-spacing:-.01em;margin-bottom:10px">5월 금융 프로그램</h2>
-    <div style="width:40px;height:1px;background:var(--gold);margin:0 auto 18px"></div>
-    <p style="text-align:center;font-size:.78rem;color:var(--silver);line-height:1.7;max-width:680px;margin:0 auto 28px">할인은 그대로, 금융이 강해진 달입니다 · 신차교환보상 3년 기본 포함<br>모든 금리는 신용등급/심사 결과에 따라 변동될 수 있습니다</p>
-
-    <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:24px;margin-bottom:14px">
-      <p style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600;margin-bottom:14px">EV · 파격 금융</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-        <div style="border-right:1px solid rgba(201,169,110,.12);padding-right:24px">
-          <h4 style="font-size:.85rem;color:var(--white);font-weight:600;margin-bottom:8px">EQA · EQB</h4>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1.1">0%</div>
-          <p style="font-size:.7rem;color:var(--silver);margin-top:6px;line-height:1.6">전 기간 무이자 · EQB는 SK ON 배터리 적용</p>
-        </div>
-        <div>
-          <h4 style="font-size:.85rem;color:var(--white);font-weight:600;margin-bottom:8px">EQE · EQS</h4>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1.1">0.74%</div>
-          <p style="font-size:.7rem;color:var(--silver);margin-top:6px;line-height:1.6">최저 초저금리 · EQE 350+ SUV 시승 가능</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:24px;margin-bottom:14px">
-      <p style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600;margin-bottom:8px">FOCUS · 특별 금리</p>
-      <p style="font-size:.78rem;color:var(--white);margin-bottom:18px">대상 — C 200 · E 200 AMG Line · E 350 e · E 450</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:rgba(201,169,110,.12);border-radius:8px;overflow:hidden">
-        <div style="background:rgba(13,15,20,.85);padding:18px 14px;text-align:center">
-          <p style="font-size:.65rem;color:var(--silver);font-weight:600;margin-bottom:6px">24개월</p>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.1">0%</div>
-          <p style="font-size:.62rem;color:var(--gold-dim);margin-top:4px">완전 무이자</p>
-        </div>
-        <div style="background:rgba(13,15,20,.85);padding:18px 14px;text-align:center">
-          <p style="font-size:.65rem;color:var(--silver);font-weight:600;margin-bottom:6px">36개월</p>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.1">1.7%대</div>
-          <p style="font-size:.62rem;color:var(--gold-dim);margin-top:4px">최저 금리</p>
-        </div>
-        <div style="background:rgba(13,15,20,.85);padding:18px 14px;text-align:center">
-          <p style="font-size:.65rem;color:var(--silver);font-weight:600;margin-bottom:6px">60개월</p>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.1">4.56%</div>
-          <p style="font-size:.62rem;color:var(--gold-dim);margin-top:4px">선수금 50% 기준</p>
-        </div>
-      </div>
-      <p style="font-size:.68rem;color:var(--silver);margin-top:14px;line-height:1.6">※ E 200 EX/AV · E 300 — 36개월 5.16~5.20% / 60개월 5.38~5.41% (선수금 50% 기준)</p>
-    </div>
-
-    <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:24px;margin-bottom:14px">
-      <p style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600;margin-bottom:8px">PREMIUM · 잔존가치 보장형 할부</p>
-      <p style="font-size:.78rem;color:var(--white);margin-bottom:18px">대상 — GLE SUV/Coupé · GT 43 · S 450 SWB · GLC 300<br><span style="font-size:.7rem;color:var(--silver)">월 납입금 부담 최소화 · 타이어 교환 3년 무상 추가</span></p>
-      <div style="display:flex;align-items:center;gap:16px;background:rgba(201,169,110,.05);border:1px solid rgba(201,169,110,.12);border-radius:8px;padding:16px 20px">
-        <div style="flex:1">
-          <p style="font-size:.65rem;color:var(--silver);font-weight:600;margin-bottom:4px">일반 할부</p>
-          <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.2rem;color:var(--white);font-weight:600">6.35~6.70%</p>
-        </div>
-        <div style="font-size:.8rem;color:var(--gold-dim);font-weight:700">VS</div>
-        <div style="flex:1;text-align:right">
-          <p style="font-size:.65rem;color:var(--gold);font-weight:600;margin-bottom:4px">잔존가치 보장형</p>
-          <p style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.3rem;color:var(--gold);font-weight:700">3.77~4.83% <span style="font-size:.7rem;color:var(--silver);font-weight:400;margin-left:4px">최대 2.93%p 인하</span></p>
-        </div>
-      </div>
-      <p style="font-size:.68rem;color:var(--sky-light);margin-top:14px;line-height:1.6">S 450 4MATIC SWB 전용 — 잔존가치 보장형 적용 시 3%대 금리까지 가능</p>
-    </div>
-
-    <div style="background:rgba(13,15,20,.5);border:1px solid rgba(201,169,110,.18);border-radius:10px;padding:24px">
-      <p style="font-size:.62rem;color:var(--gold-dim);letter-spacing:2px;font-weight:600;margin-bottom:14px">CARD · 카드사 채널 (참고)</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-        <div style="border-right:1px solid rgba(201,169,110,.12);padding-right:24px">
-          <h4 style="font-size:.8rem;color:var(--white);font-weight:600;margin-bottom:6px">신한카드 자체 금리</h4>
-          <div style="font-family:'MBK CorpoA','Outfit',sans-serif;font-size:1.4rem;font-weight:700;color:var(--gold);line-height:1.1">3.7~4.1%</div>
-          <p style="font-size:.68rem;color:var(--silver);margin-top:4px">개월수에 따라 변동</p>
-        </div>
-        <div>
-          <h4 style="font-size:.8rem;color:var(--white);font-weight:600;margin-bottom:6px">카드사 채널 특징</h4>
-          <p style="font-size:.74rem;color:var(--silver);line-height:1.65">카드 포인트·캐시백 활용 가능<br>신용·한도 조건에 따라 실효 비용 결정</p>
-        </div>
-      </div>
-    </div>
-    <p style="font-size:.68rem;color:var(--gold-dim);margin-top:18px;line-height:1.6;text-align:center">※ 모든 금리는 신용등급·심사 결과에 따라 변동 · 정확한 금융 시뮬레이션은 상담 시 안내</p>
-  </section>
-
-  <section class="section" id="sec_Aclass">
-    <div class="section-header">
-      <div class="section-icon">A</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">A클래스</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">A 220 Hatch</td>
-          <td class="price-val">48,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">43,290,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG A 45 S 4MATIC+</td>
-          <td class="price-val">80,400,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">73,160,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">A 220 Sedan</td>
-          <td class="price-val">49,900,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">5%</td>
-          <td class="real-val">47,400,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG A 35 4MATIC</td>
-          <td class="price-val">67,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">67,700,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_CLA">
-    <div class="section-header">
-      <div class="section-icon">CLA</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">CLA</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">CLA 250 4MATIC AMG Line</td>
-          <td class="price-val">63,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">7%</td>
-          <td class="real-val">59,240,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG CLA 45 S 4MATIC+</td>
-          <td class="price-val">90,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">5%</td>
-          <td class="real-val">86,070,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG CLA 45 S 4MATIC+ Final Edition</td>
-          <td class="price-val">95,800,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">95,800,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_GLA_GLB">
-    <div class="section-header">
-      <div class="section-icon">GL</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">GLA·GLB</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">GLA 250 4MATIC AMG Line</td>
-          <td class="price-val">69,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">61,490,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLB 200 d</td>
-          <td class="price-val">63,300,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">63,300,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLB 250 4MATIC</td>
-          <td class="price-val">71,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">63,270,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLB 35 4MATIC</td>
-          <td class="price-val">78,500,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">69,860,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_Cclass">
-    <div class="section-header">
-      <div class="section-icon">C</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">C클래스</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">C 200 AVANTGARDE</td>
-          <td class="price-val">64,300,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">57,220,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">C 200 AMG Line</td>
-          <td class="price-val">67,500,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">60,070,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_Eclass">
-    <div class="section-header">
-      <div class="section-icon">E</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">E클래스</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">E 200 AVANTGARDE</td>
-          <td class="price-val">76,500,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">16%</td>
-          <td class="real-val">64,260,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 200 EXCLUSIVE</td>
-          <td class="price-val">76,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">5%</td>
-          <td class="real-val">72,770,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 200 AMG Line</td>
-          <td class="price-val">80,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">71,200,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 220 d 4MATIC EXCLUSIVE</td>
-          <td class="price-val">86,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">78,350,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 300 4MATIC EXCLUSIVE</td>
-          <td class="price-val">93,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">83,300,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 300 4MATIC AMG Line</td>
-          <td class="price-val">97,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">86,950,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 350 e 4MATIC EXCLUSIVE</td>
-          <td class="price-val">98,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">87,840,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 450 4MATIC AMG Line</td>
-          <td class="price-val">114,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">101,990,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">E 450 4MATIC EXCLUSIVE</td>
-          <td class="price-val">128,200,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">11%</td>
-          <td class="real-val">114,090,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG E 53 HYBRID 4MATIC+</td>
-          <td class="price-val">141,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">127,440,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_Sclass">
-    <div class="section-header">
-      <div class="section-icon">S</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">S클래스</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">S 350 d 4MATIC</td>
-          <td class="price-val">152,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">137,340,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 350 d 4MATIC (CY25/2)</td>
-          <td class="price-val">153,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">138,240,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 450 4MATIC</td>
-          <td class="price-val">159,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">8%</td>
-          <td class="real-val">146,830,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 450 4MATIC (CY25/2)</td>
-          <td class="price-val">160,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">8%</td>
-          <td class="real-val">147,750,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 450 4MATIC (Long)</td>
-          <td class="price-val">191,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">172,440,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 450 4MATIC (Long) (CY25/2)</td>
-          <td class="price-val">193,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">174,240,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 500 4MATIC</td>
-          <td class="price-val">213,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">192,240,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 500 4MATIC (CY25/2)</td>
-          <td class="price-val">215,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">194,040,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">S 580 4MATIC</td>
-          <td class="price-val">258,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">232,740,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG S 63 E Performance</td>
-          <td class="price-val">297,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">267,840,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_CLE">
-    <div class="section-header">
-      <div class="section-icon">CLE</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">CLE</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">CLE 200 Coupé AMG Line</td>
-          <td class="price-val">75,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">5%</td>
-          <td class="real-val">71,910,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">CLE 450 4MATIC Coupé AMG Line</td>
-          <td class="price-val">98,400,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">89,540,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG CLE 53 4MATIC+ Coupé</td>
-          <td class="price-val">107,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">3%</td>
-          <td class="real-val">104,460,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">CLE 200 Cabriolet AMG Line</td>
-          <td class="price-val">82,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">4%</td>
-          <td class="real-val">78,810,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">CLE 450 4MATIC Cabriolet AMG Line</td>
-          <td class="price-val">102,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">6%</td>
-          <td class="real-val">96,440,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG CLE 53 4MATIC+ Cabriolet</td>
-          <td class="price-val">113,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">3%</td>
-          <td class="real-val">110,190,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_GLC">
-    <div class="section-header">
-      <div class="section-icon">GLC</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">GLC</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">GLC 220 d 4MATIC</td>
-          <td class="price-val">81,200,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">7%</td>
-          <td class="real-val">75,510,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLC 300 4MATIC AVANTGARDE</td>
-          <td class="price-val">81,400,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">74,070,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLC 300 4MATIC AMG Line</td>
-          <td class="price-val">91,400,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">12%</td>
-          <td class="real-val">80,430,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLC 43 4MATIC</td>
-          <td class="price-val">102,300,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">7%</td>
-          <td class="real-val">95,130,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLC 300 4MATIC Coupé AVANTGARDE</td>
-          <td class="price-val">85,500,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">77,800,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLC 300 4MATIC Coupé AMG Line</td>
-          <td class="price-val">95,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">87,080,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLC 43 4MATIC Coupé</td>
-          <td class="price-val">106,900,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">3%</td>
-          <td class="real-val">103,690,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_GLE">
-    <div class="section-header">
-      <div class="section-icon">GLE</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">GLE</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">GLE 350 4MATIC</td>
-          <td class="price-val">116,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">104,940,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLE 300 d 4MATIC</td>
-          <td class="price-val">117,800,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">8%</td>
-          <td class="real-val">108,370,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLE 450 4MATIC</td>
-          <td class="price-val">127,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">14%</td>
-          <td class="real-val">109,730,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLE 450 4MATIC AMG Line</td>
-          <td class="price-val">137,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">14%</td>
-          <td class="real-val">118,330,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLE 53 4MATIC+</td>
-          <td class="price-val">164,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">8%</td>
-          <td class="real-val">151,430,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLE 450 d 4MATIC Coupé AMG Line</td>
-          <td class="price-val">132,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">8%</td>
-          <td class="real-val">121,990,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLE 450 4MATIC Coupé AMG Line</td>
-          <td class="price-val">141,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">14%</td>
-          <td class="real-val">121,340,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLE 53 4MATIC+ Coupé</td>
-          <td class="price-val">168,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">5%</td>
-          <td class="real-val">160,170,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_GLS">
-    <div class="section-header">
-      <div class="section-icon">GLS</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">GLS</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">GLS 450 d 4MATIC AMG Line</td>
-          <td class="price-val">152,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">3%</td>
-          <td class="real-val">148,020,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLS 450 4MATIC AMG Line</td>
-          <td class="price-val">152,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">6%</td>
-          <td class="real-val">143,440,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLS 450 d 4MATIC AMG Line Premium</td>
-          <td class="price-val">157,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">157,100,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLS 450 4MATIC AMG Line Premium</td>
-          <td class="price-val">157,100,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">157,100,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">GLS 580 4MATIC AMG Line</td>
-          <td class="price-val">192,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">7%</td>
-          <td class="real-val">178,560,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GLS 63 4MATIC+</td>
-          <td class="price-val">208,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">1%</td>
-          <td class="real-val">206,510,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_Gclass">
-    <div class="section-header">
-      <div class="section-icon">G</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">G클래스</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="">
-          <td class="model-name">G 450 d</td>
-          <td class="price-val">193,500,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">193,500,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">G 450 d MANUFAKTUR</td>
-          <td class="price-val">217,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">217,700,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG G 63</td>
-          <td class="price-val">261,200,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">261,200,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG G 63 MANUFAKTUR</td>
-          <td class="price-val">288,400,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">288,400,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_AMG_GT_SL">
-    <div class="section-header">
-      <div class="section-icon">GT</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">AMG GT·SL</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG SL 43</td>
-          <td class="price-val">158,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">144,320,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG SL 63 4MATIC+</td>
-          <td class="price-val">248,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">248,600,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GT 55 4MATIC+</td>
-          <td class="price-val">208,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">3%</td>
-          <td class="real-val">202,340,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GT 63 S E Performance</td>
-          <td class="price-val">278,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">4%</td>
-          <td class="real-val">267,450,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="amg">
-          <td class="model-name">Mercedes-AMG GT 43 4MATIC+</td>
-          <td class="price-val">162,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">147,960,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_전동화_EQ">
-    <div class="section-header">
-      <div class="section-icon">EQ</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">전동화 EQ</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="eq">
-          <td class="model-name">EQA 250 Progressive</td>
-          <td class="price-val">70,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">63,000,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQA 250 AMG Line</td>
-          <td class="price-val">75,800,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">68,220,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQB 300 4MATIC Progressive</td>
-          <td class="price-val">78,800,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">70,920,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQB 300 4MATIC AMG Line</td>
-          <td class="price-val">84,300,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">75,870,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQE 350+ SUV</td>
-          <td class="price-val">106,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">95,400,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQE 350+</td>
-          <td class="price-val">110,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">99,000,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQE 500 4MATIC SUV</td>
-          <td class="price-val">140,800,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">126,720,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQS 450 4MATIC SUV</td>
-          <td class="price-val">164,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">10%</td>
-          <td class="real-val">148,140,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="">
-          <td class="model-name">EQS 580 4MATIC SUV</td>
-          <td class="price-val">190,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">190,600,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="eq">
-          <td class="model-name">G 580 with EQ Technology</td>
-          <td class="price-val">214,700,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">214,700,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="section" id="sec_Maybach">
-    <div class="section-header">
-      <div class="section-icon">M</div>
-      <div>
-        <p class="section-sub">Mercedes-Benz</p>
-        <h2 class="section-title">Maybach</h2>
-      </div>
-    </div>
-    <table class="price-table">
-      <colgroup><col class="col-name"><col class="col-msrp"><col class="col-disc"><col class="col-real"></colgroup>
-      <thead>
-        <tr class="thead-row">
-          <th>모델명</th>
-          <th class="th-right">권장 소비자가격</th>
-          <th class="th-center">프로모션</th>
-          <th class="th-right">실구매가</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach S 580</td>
-          <td class="price-val">315,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">287,190,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach S 680</td>
-          <td class="price-val">401,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">9%</td>
-          <td class="real-val">365,450,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach S 680 "V12 Edition"</td>
-          <td class="price-val">478,000,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">478,000,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach SL 680</td>
-          <td class="price-val">342,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">2%</td>
-          <td class="real-val">335,740,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach GLS 600</td>
-          <td class="price-val">293,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">6%</td>
-          <td class="real-val">275,980,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach GLS 600 MANUFAKTUR</td>
-          <td class="price-val">335,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">6%</td>
-          <td class="real-val">315,460,000<span class="price-unit">원</span></td>
-        </tr>
-        <tr class="maybach">
-          <td class="model-name">Mercedes-Maybach EQS 680 SUV</td>
-          <td class="price-val">233,600,000<span class="price-unit">원</span></td>
-          <td class="discount-cell">-</td>
-          <td class="real-val">233,600,000<span class="price-unit">원</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <div class="cta-bar">
-    <div class="cta-text">
-      <div class="t1">상담 문의 | 벤츠 KCC오토 금천 멀티센터 권혁 과장</div>
-      <div class="t2">가격 외 할인·금융·출고 조건은 편하게 문의 주세요. (📞 010-9081-0058)</div>
-    </div>
-    <div class="cta-links">
-      <a class="cta-btn" href="tel:010-9081-0058">📞 전화 상담</a>
-      <a class="cta-btn" href="sms:010-9081-0058">💬 문자 문의</a>
-    </div>
-  </div>
-  
-  <div class="disclaimer">
-    가격은 VAT 포함이며 사전 예고 없이 변경될 수 있습니다.<br>
-    개별 할인·프로모션·금융 조건은 현재 재고 상황에 따라 다를 수 있으니 별도 문의 바랍니다.
-  </div>
-
 </div>
 
-<div class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<div class="extra-promo">
+  <div class="ep-head">
+    <span class="ep-tag">EXTRA · 공통 추가할인</span>
+    <span class="ep-title">조건 충족 시 위 실구매가에서 추가로 차감되는 항목</span>
+    <span class="ep-note">※ 항목별 중복 가능 · 일부는 택1</span>
+  </div>
+  <div class="ep-grid">
+    <div class="ep-item gold">
+      <span class="ep-val">+2%</span>
+      <span class="ep-text"><b>벤츠코리아 MOU 임직원 할인</b><span class="ep-meta">벤츠코리아 MOU 체결 기업 임직원 본인·가족 명의 구매 시</span></span>
+    </div>
+    <div class="ep-item gold">
+      <span class="ep-val">+2%</span>
+      <span class="ep-text"><b>TEV+ 법인 추가할인</b><span class="ep-meta">AMG · Maybach · S클래스 · GLS 한정 · 법인 명의 구매 시</span></span>
+    </div>
 
-<script>
-function scrollToId(id) {
-  const el = document.getElementById(id);
-  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-}
-// Nav active state
-const navBtns = document.querySelectorAll('.nav-btn');
-const sections = ['sec_MayHot','sec_Finance','sec_Aclass','sec_CLA','sec_GLA_GLB','sec_Cclass','sec_Eclass','sec_Sclass','sec_CLE','sec_GLC','sec_GLE','sec_GLS','sec_Gclass','sec_AMG_GT_SL','sec_전동화_EQ','sec_Maybach'];
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el && window.scrollY >= el.offsetTop - 80) cur = id;
-  });
-  navBtns.forEach((btn, i) => {
-    btn.classList.toggle('active', sections[i] === cur);
-  });
-});
-</script>
+
+    <div class="ep-item">
+      <span class="ep-val">+1<br>~2%</span>
+      <span class="ep-text"><b>재구매 (Cash Retention)</b><span class="ep-meta">기존 벤츠 보유 고객 · AMG/S/G/Maybach +2%, 그 외 +1%</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">+1%</span>
+      <span class="ep-text"><b>중고차 동시 매각 (Trade-in)</b><span class="ep-meta">재구매 할인에 추가 중첩 가능 · Conquest와는 택1</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">+1%</span>
+      <span class="ep-text"><b>타브랜드 보유 (Conquest)</b><span class="ep-meta">GLC · GLE 한정 · BMW/Audi/Genesis/Volvo/Porsche/Land Rover</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">+1%</span>
+      <span class="ep-text"><b>전시차 (Display Car)</b><span class="ep-meta">전시 30일 경과 차량 · 즉시 출고 가능</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">+1%</span>
+      <span class="ep-text"><b>하자 수리 이력 (Repair History)</b><span class="ep-meta">자동차관리법 8조의2 고지 대상 차량</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">+1%</span>
+      <span class="ep-text"><b>하이마일리지 (High Mileage)</b><span class="ep-meta">입항 시 100km 이상 차량 · STS 자동 등록</span></span>
+    </div>
+    <div class="ep-item">
+      <span class="ep-val">EW</span>
+      <span class="ep-text"><b>무상 보증 연장 (Extended Warranty)</b><span class="ep-meta">전 EQ 차종 · Maybach S 580/680 · 최대 5년/17만km</span></span>
+    </div>
+  </div>
+</div>
+
+
+<section class="section" id="sec_A">
+  <div class="section-header">
+    <div class="section-icon">A</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">A클래스</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">A 220 Hatch</span></td>
+      <td class="c-msrp">48,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-4,810,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">43,290,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">A 220 Sedan</span></td>
+      <td class="c-msrp">49,900,000<small>원</small></td>
+      <td class="c-base"><span class="pct">5%</span><span class="amt">-2,490,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">47,410,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG A 45 S 4MATIC+</span></td>
+      <td class="c-msrp">80,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-7,230,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">73,170,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG A 35 4MATIC</span></td>
+      <td class="c-msrp">67,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">67,700,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_CLA">
+  <div class="section-header">
+    <div class="section-icon">CLA</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">CLA</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLA 250 4MATIC AMG Line</span></td>
+      <td class="c-msrp">63,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">7%</span><span class="amt">-4,450,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">59,250,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG CLA 45 S 4MATIC+</span></td>
+      <td class="c-msrp">90,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">5%</span><span class="amt">-4,530,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">86,070,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG CLA 45 S 4MATIC+ Final Edition</span></td>
+      <td class="c-msrp">95,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">95,800,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_GLA_GLB">
+  <div class="section-header">
+    <div class="section-icon">GL</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">GLA · GLB</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLA 250 4MATIC AMG Line</span></td>
+      <td class="c-msrp">69,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-7,600,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">61,500,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLB 200 d</span></td>
+      <td class="c-msrp">63,300,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">63,300,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLB 250 4MATIC</span></td>
+      <td class="c-msrp">71,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-7,820,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">63,280,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLB 35 4MATIC</span></td>
+      <td class="c-msrp">78,500,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-8,630,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">69,870,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_C">
+  <div class="section-header">
+    <div class="section-icon">C</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">C클래스</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">C 200 AVANTGARDE</span></td>
+      <td class="c-msrp">64,300,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-7,070,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-9,640,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">54,660,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">C 200 AMG Line</span></td>
+      <td class="c-msrp">67,500,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-7,420,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-10,120,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">57,380,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_E">
+  <div class="section-header">
+    <div class="section-icon">E</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">E클래스</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">E 200 AVANTGARDE</span></td>
+      <td class="c-msrp">76,500,000<small>원</small></td>
+      <td class="c-base"><span class="pct">16%</span><span class="amt">-12,240,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">64,260,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">E 200 EXCLUSIVE</span></td>
+      <td class="c-msrp">76,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">5%</span><span class="amt">-3,830,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">12%</span><span class="amt fin">-9,190,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 5% + JC +7%</span></td>
+      <td class="c-real">67,410,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">E 200 AMG Line</span></td>
+      <td class="c-msrp">80,000,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-8,800,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-12,000,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">68,000,000<small>원</small></td>
+    </tr>
+<tr class="rof has-fin">
+      <td class="c-name"><span class="m-main">E 200 AMG Line</span><span class="m-sub">RoF Edition (한정 1,000대 · 나이트패키지 -20만원)</span></td>
+      <td class="c-msrp">80,710,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-8,870,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-12,090,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">68,620,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">E 220 d 4MATIC EXCLUSIVE</span></td>
+      <td class="c-msrp">86,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-7,740,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">78,360,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">E 300 4MATIC EXCLUSIVE</span></td>
+      <td class="c-msrp">93,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-10,290,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-14,030,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">79,570,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">E 300 4MATIC AMG Line</span></td>
+      <td class="c-msrp">97,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-10,740,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">15%</span><span class="amt fin">-14,640,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 11% + JC +4%</span></td>
+      <td class="c-real">83,060,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">E 300 4MATIC AMG Line</span><span class="m-sub">140주년 Edition · 옵션 +570만원 반영</span></td>
+      <td class="c-msrp">103,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-6,200,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">10%</span><span class="amt fin">-10,330,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 6% + JC +4%</span></td>
+      <td class="c-real">93,070,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">E 350 e 4MATIC EXCLUSIVE</span></td>
+      <td class="c-msrp">98,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-10,850,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">87,850,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">E 450 4MATIC AMG Line</span></td>
+      <td class="c-msrp">114,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-12,600,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">102,000,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">E 450 4MATIC EXCLUSIVE</span></td>
+      <td class="c-msrp">128,200,000<small>원</small></td>
+      <td class="c-base"><span class="pct">11%</span><span class="amt">-14,100,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">114,100,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG E 53 HYBRID 4MATIC+</span></td>
+      <td class="c-msrp">141,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-14,160,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">127,440,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_S">
+  <div class="section-header">
+    <div class="section-icon">S</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">S클래스</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">S 350 d 4MATIC</span></td>
+      <td class="c-msrp">152,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-15,260,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">137,340,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">S 450 4MATIC Sedan (SWB)</span><span class="m-sub" style="color:#7cc4ff;">운용리스 선택 시 추가 할인 적용</span></td>
+      <td class="c-msrp">160,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">8%</span><span class="amt">-12,840,000<small>원</small></span></td>
+      <td class="c-fin">
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <div><span class="pct fin">12%</span><span class="amt fin">-19,270,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;">할부 (기본 8% + JC +4%)</span></div>
+          <div><span class="pct fin" style="background:#7cc4ff;">14%</span><span class="amt fin" style="color:#7cc4ff;">-22,480,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;">운용리스 (기본 8% + JC +6%)</span></div>
+        </div>
+      </td>
+      <td class="c-real">
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;line-height:1.2;">
+          <div>141,320,000<small>원</small><span style="display:block;font-size:.6rem;color:var(--silver);font-weight:400;">할부 기준</span></div>
+          <div style="color:#7cc4ff;">138,110,000<small>원</small><span style="display:block;font-size:.6rem;color:var(--silver);font-weight:400;">운용리스 기준</span></div>
+        </div>
+      </td>
+    </tr>
+<tr class=" fin-options-row">
+      <td colspan="5" style="padding:10px 16px 12px 16px;background:rgba(124,196,255,0.05);border-top:1px dashed rgba(124,196,255,0.28);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:4px;">
+          <span style="color:#7cc4ff;font-size:.72rem;font-weight:700;letter-spacing:.04em;">↳ S 450 SWB · 운용리스 추가 할인 옵션</span>
+          <span style="font-size:.6rem;color:var(--silver);font-weight:400;">기존 운용리스 14% 위에 누적</span>
+        </div>
+
+        <div style="font-size:.6rem;color:var(--silver);letter-spacing:.06em;margin:2px 0 2px 0;">[ 단일 옵션 ]</div>
+        <div style="display:flex;flex-direction:column;gap:2px;font-size:.72rem;margin-bottom:8px;">
+          <div style="display:grid;grid-template-columns:1.3fr .9fr 1fr 1.4fr;gap:10px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="color:var(--ink-soft,#cdd6e0);">+ 벤츠 보유</span>
+            <span style="color:#7cc4ff;font-weight:600;">+2% (총 16%)</span>
+            <span style="color:var(--silver);text-align:right;">-3,210,000<small>원</small></span>
+            <span style="color:#7cc4ff;font-weight:700;text-align:right;">실구매 134,900,000<small>원</small></span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.3fr .9fr 1fr 1.4fr;gap:10px;align-items:center;padding:3px 0;">
+            <span style="color:var(--ink-soft,#cdd6e0);">+ 법인 or MOU</span>
+            <span style="color:#7cc4ff;font-weight:600;">+2% (총 16%)</span>
+            <span style="color:var(--silver);text-align:right;">-3,210,000<small>원</small></span>
+            <span style="color:#7cc4ff;font-weight:700;text-align:right;">실구매 134,900,000<small>원</small></span>
+          </div>
+        </div>
+
+        <div style="font-size:.6rem;color:var(--silver);letter-spacing:.06em;margin:2px 0 2px 0;">[ 누적 (벤츠 보유 기반) ]</div>
+        <div style="display:flex;flex-direction:column;gap:2px;font-size:.72rem;">
+          <div style="display:grid;grid-template-columns:1.3fr .9fr 1fr 1.4fr;gap:10px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="color:var(--ink-soft,#cdd6e0);">+ 벤츠 보유 + 트레이드인</span>
+            <span style="color:#7cc4ff;font-weight:600;">+3% (총 17%)</span>
+            <span style="color:var(--silver);text-align:right;">-4,810,000<small>원</small></span>
+            <span style="color:#7cc4ff;font-weight:700;text-align:right;">실구매 133,290,000<small>원</small></span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.3fr .9fr 1fr 1.4fr;gap:10px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="color:var(--ink-soft,#cdd6e0);">+ 벤츠 보유 + 법인 or MOU</span>
+            <span style="color:#7cc4ff;font-weight:600;">+4% (총 18%)</span>
+            <span style="color:var(--silver);text-align:right;">-6,420,000<small>원</small></span>
+            <span style="color:#7cc4ff;font-weight:700;text-align:right;">실구매 131,690,000<small>원</small></span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.3fr .9fr 1fr 1.4fr;gap:10px;align-items:center;padding:5px 0;margin-top:2px;background:rgba(233,210,139,0.06);border-top:1px solid rgba(233,210,139,0.35);border-bottom:1px solid rgba(233,210,139,0.35);">
+            <span style="color:var(--gold-light,#e9d28b);font-weight:700;">+ 벤츠 보유 + 법인 or MOU + 트레이드인 <span style="font-size:.6rem;background:var(--gold-light,#e9d28b);color:#1a1a1a;padding:1px 5px;border-radius:3px;margin-left:4px;">MAX</span></span>
+            <span style="color:var(--gold-light,#e9d28b);font-weight:700;">+5% (총 19%)</span>
+            <span style="color:var(--gold-light,#e9d28b);text-align:right;font-weight:600;">-8,030,000<small>원</small></span>
+            <span style="color:var(--gold-light,#e9d28b);font-weight:800;text-align:right;">실구매 130,080,000<small>원</small></span>
+          </div>
+        </div>
+
+        <div style="font-size:.6rem;color:var(--silver);font-style:italic;margin-top:8px;padding-top:6px;border-top:1px dashed rgba(255,255,255,0.06);">
+          ※ 트레이드인 옵션은 벤츠 보유 고객 한정 (기존 보유 차량 매입가 처분 전제)
+        </div>
+      </td>
+    </tr>
+<tr>
+  <td colspan="5" style="padding:0 0 18px 0;border:none;">
+    <div style="margin:14px 0 4px;border:1px solid rgba(124,196,255,.4);border-radius:14px;background:linear-gradient(135deg,rgba(124,196,255,.05) 0%,rgba(201,169,110,.03) 100%);padding:18px 20px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(124,196,255,.18);">
+        <span style="background:#7cc4ff;color:#0d0f14;font-family:'MBK CorpoA','Outfit',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:4px;">S 450 SWB · 운용리스 추가 할인 시뮬레이터</span>
+        <span style="font-family:'MBK CorpoA Cond','Playfair Display',serif;font-size:.95rem;color:var(--white);font-weight:700;">옵션 조합별 토탈 할인 한눈에 보기</span>
+        <span style="margin-left:auto;font-size:.7rem;color:var(--silver);">기준: MSRP 159,600,000원 · 운용리스 14% 베이스 위에 누적</span>
+      </div>
+      <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:.8rem;font-family:'MBK CorpoS Light','Noto Sans KR',sans-serif;">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(124,196,255,.25);">
+            <th style="text-align:left;padding:8px 10px;font-size:.65rem;letter-spacing:.8px;color:var(--silver);font-weight:500;text-transform:uppercase;font-family:'MBK CorpoA','Outfit',sans-serif;">옵션 조합</th>
+            <th style="text-align:center;padding:8px 6px;font-size:.65rem;letter-spacing:.8px;color:var(--silver);font-weight:500;text-transform:uppercase;font-family:'MBK CorpoA','Outfit',sans-serif;">추가 할인</th>
+            <th style="text-align:right;padding:8px 10px;font-size:.65rem;letter-spacing:.8px;color:var(--silver);font-weight:500;text-transform:uppercase;font-family:'MBK CorpoA','Outfit',sans-serif;">추가 차감</th>
+            <th style="text-align:right;padding:8px 10px;font-size:.65rem;letter-spacing:.8px;background:#7cc4ff;color:#0d0f14;font-weight:700;text-transform:uppercase;font-family:'MBK CorpoA','Outfit',sans-serif;border-radius:4px 0 0 4px;">토탈 할인</th>
+            <th style="text-align:right;padding:8px 10px;font-size:.65rem;letter-spacing:.8px;background:#7cc4ff;color:#0d0f14;font-weight:700;text-transform:uppercase;font-family:'MBK CorpoA','Outfit',sans-serif;border-radius:0 4px 4px 0;">실 구매가</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);">
+            <td style="padding:11px 10px;color:var(--silver);">운용리스 단독 (베이스)</td>
+            <td style="padding:11px 6px;text-align:center;"><span style="background:rgba(124,196,255,.15);color:#7cc4ff;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:4px;">14%</span></td>
+            <td style="padding:11px 10px;text-align:right;color:#7cc4ff;font-family:'MBK CorpoA','Outfit',sans-serif;">-22,330,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#7cc4ff;font-size:.95rem;">14% · -22,330,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--white);font-size:1rem;">137,270,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:11px 10px;color:var(--light);">+ 재구매 (벤츠 보유)</td>
+            <td style="padding:11px 6px;text-align:center;"><span style="background:rgba(201,169,110,.15);color:var(--gold);font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:4px;">+2%</span></td>
+            <td style="padding:11px 10px;text-align:right;color:var(--gold-light);font-family:'MBK CorpoA','Outfit',sans-serif;">-3,190,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#7cc4ff;font-size:.95rem;">16% · -25,520,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--white);font-size:1rem;">134,080,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:11px 10px;color:var(--light);">+ TEV+ 법인 or MOU</td>
+            <td style="padding:11px 6px;text-align:center;"><span style="background:rgba(201,169,110,.15);color:var(--gold);font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:4px;">+2%</span></td>
+            <td style="padding:11px 10px;text-align:right;color:var(--gold-light);font-family:'MBK CorpoA','Outfit',sans-serif;">-3,190,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#7cc4ff;font-size:.95rem;">16% · -25,520,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--white);font-size:1rem;">134,080,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:11px 10px;color:var(--light);">+ 재구매 + 트레이드인</td>
+            <td style="padding:11px 6px;text-align:center;"><span style="background:rgba(201,169,110,.15);color:var(--gold);font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:4px;">+3%</span></td>
+            <td style="padding:11px 10px;text-align:right;color:var(--gold-light);font-family:'MBK CorpoA','Outfit',sans-serif;">-4,780,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#7cc4ff;font-size:.95rem;">17% · -27,110,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--white);font-size:1rem;">132,490,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:11px 10px;color:var(--light);">+ 재구매 + TEV+ 법인 or MOU</td>
+            <td style="padding:11px 6px;text-align:center;"><span style="background:rgba(201,169,110,.15);color:var(--gold);font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:4px;">+4%</span></td>
+            <td style="padding:11px 10px;text-align:right;color:var(--gold-light);font-family:'MBK CorpoA','Outfit',sans-serif;">-6,380,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#7cc4ff;font-size:.95rem;">18% · -28,710,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:11px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--white);font-size:1rem;">130,890,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+          <tr style="background:rgba(201,169,110,.1);border-left:3px solid var(--gold);">
+            <td style="padding:13px 10px;color:var(--gold-light);font-weight:600;">+ 재구매 + TEV+ 법인 or MOU + 트레이드인 <span style="background:var(--gold);color:#0d0f14;font-family:'MBK CorpoA','Outfit',sans-serif;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:3px;margin-left:6px;letter-spacing:1px;">MAX</span></td>
+            <td style="padding:13px 6px;text-align:center;"><span style="background:var(--gold);color:#0d0f14;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;font-size:.82rem;padding:2px 9px;border-radius:4px;">+5%</span></td>
+            <td style="padding:13px 10px;text-align:right;color:var(--gold);font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:600;">-7,970,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:13px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:var(--gold);font-size:1rem;">19% · -30,300,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+            <td style="padding:13px 10px;text-align:right;font-family:'MBK CorpoA','Outfit',sans-serif;font-weight:700;color:#ffffff;font-size:1.1rem;text-shadow:0 0 20px rgba(201,169,110,.4);">129,300,000<small style="color:var(--silver);margin-left:2px;font-size:.65rem;">원</small></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:.66rem;color:var(--silver);margin-top:10px;line-height:1.5;text-align:right;">※ 운용리스 14% (기본 8% + 파이낸셜·모빌리티 JC 운용리스 +6%) 베이스에 옵션 누적. 트레이드인은 벤츠 보유 고객 한정(기존 보유 차량 매입 전제) · 만원 단위 절삭.</p>
+    </div>
+  </td>
+</tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">S 450 4MATIC Long</span></td>
+      <td class="c-msrp">191,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-19,160,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">172,440,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">S 500 4MATIC Long</span></td>
+      <td class="c-msrp">213,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-21,360,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">192,240,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">S 580 4MATIC Long</span></td>
+      <td class="c-msrp">258,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-25,860,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">232,740,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG S 63 E Performance</span></td>
+      <td class="c-msrp">297,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-29,760,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">267,840,000<small>원</small></td>
+    </tr>
+<tr class="maybach ">
+      <td class="c-name"><span class="m-main">Maybach S 580 4MATIC</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">315,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-28,400,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">287,200,000<small>원</small></td>
+    </tr>
+<tr class="maybach ">
+      <td class="c-name"><span class="m-main">Maybach S 680 4MATIC</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">401,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-36,140,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">365,460,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_CLE">
+  <div class="section-header">
+    <div class="section-icon">GT</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">CLE · AMG GT · SL</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 200 Coupé AMG Line</span></td>
+      <td class="c-msrp">75,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">5%</span><span class="amt">-3,780,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">71,920,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 200 Coupé</span><span class="m-sub">140주년 Edition · 옵션 +450만원 반영</span></td>
+      <td class="c-msrp">80,200,000<small>원</small></td>
+      <td class="c-base"><span class="pct">2%</span><span class="amt">-1,600,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">78,600,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 200 Cabriolet AMG Line</span></td>
+      <td class="c-msrp">82,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">4%</span><span class="amt">-3,280,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">78,820,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 200 Cabriolet</span><span class="m-sub">140주년 Edition · 옵션 +430만원 반영</span></td>
+      <td class="c-msrp">86,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">2%</span><span class="amt">-1,720,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">84,680,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 450 4MATIC Coupé AMG Line</span></td>
+      <td class="c-msrp">98,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-8,850,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">89,550,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">CLE 450 4MATIC Cabriolet AMG Line</span></td>
+      <td class="c-msrp">102,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-6,150,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">96,450,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG CLE 53 4MATIC+ Coupé</span></td>
+      <td class="c-msrp">107,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">3%</span><span class="amt">-3,230,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">104,470,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG CLE 53 4MATIC+ Cabriolet</span></td>
+      <td class="c-msrp">113,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">3%</span><span class="amt">-3,400,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">110,200,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG SL 43</span></td>
+      <td class="c-msrp">158,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-14,270,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">144,330,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GT 43 4MATIC+</span></td>
+      <td class="c-msrp">162,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-14,630,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">147,970,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GT 55 4MATIC+ Coupe</span></td>
+      <td class="c-msrp">208,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">3%</span><span class="amt">-6,250,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">202,350,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GT 63 S E Performance</span></td>
+      <td class="c-msrp">278,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">4%</span><span class="amt">-11,140,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">267,460,000<small>원</small></td>
+    </tr>
+<tr class="maybach ">
+      <td class="c-name"><span class="m-main">Maybach SL 680</span></td>
+      <td class="c-msrp">342,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">2%</span><span class="amt">-6,850,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">335,750,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_GLC">
+  <div class="section-header">
+    <div class="section-icon">GLC</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">GLC</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLC 220 d 4MATIC</span></td>
+      <td class="c-msrp">81,200,000<small>원</small></td>
+      <td class="c-base"><span class="pct">7%</span><span class="amt">-5,680,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">75,520,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC AVANTGARDE</span></td>
+      <td class="c-msrp">81,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-7,320,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">13%</span><span class="amt fin">-10,570,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 9% + JC +4%</span></td>
+      <td class="c-real">70,830,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC AMG Line</span></td>
+      <td class="c-msrp">91,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct">12%</span><span class="amt">-10,960,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">80,440,000<small>원</small></td>
+    </tr>
+<tr class="rof ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC AMG Line</span><span class="m-sub">RoF Edition</span></td>
+      <td class="c-msrp">92,660,000<small>원</small></td>
+      <td class="c-base"><span class="pct">12%</span><span class="amt">-11,110,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">81,550,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC AMG Line</span><span class="m-sub">140주년 · 옵션 +540만원 반영 (에어매틱·후륜조향)</span></td>
+      <td class="c-msrp">96,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-5,800,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">91,000,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC Coupé AVANTGARDE</span></td>
+      <td class="c-msrp">85,500,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-7,690,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">13%</span><span class="amt fin">-11,110,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 9% + JC +4%</span></td>
+      <td class="c-real">74,390,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC Coupé AMG Line</span></td>
+      <td class="c-msrp">95,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-8,610,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">87,090,000<small>원</small></td>
+    </tr>
+<tr class="rof ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC Coupé AMG Line</span><span class="m-sub">RoF Edition</span></td>
+      <td class="c-msrp">96,960,000<small>원</small></td>
+      <td class="c-base"><span class="pct">9%</span><span class="amt">-8,720,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">88,240,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLC 300 4MATIC Coupé AMG Line</span><span class="m-sub">140주년 · 옵션 +540만원 반영 (에어매틱·후륜조향)</span></td>
+      <td class="c-msrp">101,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">4%</span><span class="amt">-4,040,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">97,060,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLC 43 4MATIC</span></td>
+      <td class="c-msrp">102,300,000<small>원</small></td>
+      <td class="c-base"><span class="pct">7%</span><span class="amt">-7,160,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">95,140,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLC 43 4MATIC Coupé</span></td>
+      <td class="c-msrp">106,900,000<small>원</small></td>
+      <td class="c-base"><span class="pct">3%</span><span class="amt">-3,200,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">103,700,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_GLE">
+  <div class="section-header">
+    <div class="section-icon">GLE</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">GLE</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLE 350 4MATIC</span></td>
+      <td class="c-msrp">116,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-11,660,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">104,940,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLE 300 d 4MATIC</span></td>
+      <td class="c-msrp">117,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct">8%</span><span class="amt">-9,420,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">108,380,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLE 450 4MATIC</span></td>
+      <td class="c-msrp">127,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">14%</span><span class="amt">-17,860,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">18%</span><span class="amt fin">-22,960,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 14% + JC +4%</span></td>
+      <td class="c-real">104,640,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLE 450 4MATIC AMG Line</span></td>
+      <td class="c-msrp">137,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">14%</span><span class="amt">-19,260,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">18%</span><span class="amt fin">-24,760,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 14% + JC +4%</span></td>
+      <td class="c-real">112,840,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLE 450 d 4MATIC Coupé</span></td>
+      <td class="c-msrp">132,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">8%</span><span class="amt">-10,600,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">122,000,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLE 450 4MATIC Coupé</span></td>
+      <td class="c-msrp">141,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">14%</span><span class="amt">-19,750,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">18%</span><span class="amt fin">-25,390,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 14% + JC +4%</span></td>
+      <td class="c-real">115,710,000<small>원</small></td>
+    </tr>
+<tr class=" has-fin">
+      <td class="c-name"><span class="m-main">GLE 450 4MATIC AMG Line Coupé</span></td>
+      <td class="c-msrp">141,100,000<small>원</small></td>
+      <td class="c-base"><span class="pct">14%</span><span class="amt">-19,750,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct fin">18%</span><span class="amt fin">-25,390,000<small>원</small></span><span style="display:block;font-size:.6rem;color:var(--silver);margin-top:2px;letter-spacing:.3px;">기본 14% + JC +4%</span></td>
+      <td class="c-real">115,710,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLE 53 4MATIC+</span></td>
+      <td class="c-msrp">164,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">8%</span><span class="amt">-13,160,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">151,440,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLE 53 4MATIC+ Coupé</span></td>
+      <td class="c-msrp">168,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">5%</span><span class="amt">-8,430,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">160,170,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_GLS_G">
+  <div class="section-header">
+    <div class="section-icon">GLS</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">GLS · G클래스</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLS 450 4MATIC AMG Line</span></td>
+      <td class="c-msrp">152,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-9,150,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">143,450,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLS 450 d 4MATIC AMG Line</span></td>
+      <td class="c-msrp">152,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">3%</span><span class="amt">-4,570,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">148,030,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">GLS 580 4MATIC AMG Line</span></td>
+      <td class="c-msrp">192,000,000<small>원</small></td>
+      <td class="c-base"><span class="pct">7%</span><span class="amt">-13,440,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">178,560,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG GLS 63 4MATIC+</span></td>
+      <td class="c-msrp">208,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">1%</span><span class="amt">-2,080,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">206,520,000<small>원</small></td>
+    </tr>
+<tr class="maybach ">
+      <td class="c-name"><span class="m-main">Maybach GLS 600</span></td>
+      <td class="c-msrp">293,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-17,610,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">275,990,000<small>원</small></td>
+    </tr>
+<tr class="maybach ">
+      <td class="c-name"><span class="m-main">Maybach GLS 600 MANUFAKTUR</span></td>
+      <td class="c-msrp">335,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">6%</span><span class="amt">-20,130,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">315,470,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">G 450 d</span></td>
+      <td class="c-msrp">193,500,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">193,500,000<small>원</small></td>
+    </tr>
+<tr class=" ">
+      <td class="c-name"><span class="m-main">G 450 d MANUFAKTUR</span></td>
+      <td class="c-msrp">217,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">217,700,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG G 63</span></td>
+      <td class="c-msrp">261,200,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">261,200,000<small>원</small></td>
+    </tr>
+<tr class="amg ">
+      <td class="c-name"><span class="m-main">Mercedes-AMG G 63 MANUFAKTUR</span></td>
+      <td class="c-msrp">288,400,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">288,400,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section" id="sec_EQ">
+  <div class="section-header">
+    <div class="section-icon">EQ</div>
+    <div>
+      <p class="section-sub">Mercedes-Benz</p>
+      <h2 class="section-title">전동화 EQ</h2>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table class="price-table">
+    <colgroup>
+      <col class="col-name"><col class="col-msrp"><col class="col-base"><col class="col-fin"><col class="col-real">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="c-name">모델명</th>
+        <th class="c-msrp">권장 소비자가</th>
+        <th class="c-base">기본 할인</th>
+        <th class="c-fin"><span class="fin-h">파이낸셜 · 모빌리티 JC</span></th>
+        <th class="c-real">실 구매가</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQA 250</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">70,000,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-7,000,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">63,000,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQA 250 AMG Line</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">75,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-7,580,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">68,220,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQB 300 4MATIC Progressive</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">78,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-7,880,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">70,920,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQB 300 4MATIC AMG Line</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">84,300,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-8,430,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">75,870,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQE 350+ SUV</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">106,000,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-10,600,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">95,400,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQE 350+</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">110,000,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-11,000,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">99,000,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQE 500 4MATIC SUV</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">140,800,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-14,080,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">126,720,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">EQS 450 4MATIC SUV</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">164,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct">10%</span><span class="amt">-16,460,000<small>원</small></span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">148,140,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">G 580 with EQ Technology</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">214,700,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">214,700,000<small>원</small></td>
+    </tr>
+<tr class="eq ">
+      <td class="c-name"><span class="m-main">Maybach EQS 680 SUV</span><span class="m-sub">EW 보증연장</span></td>
+      <td class="c-msrp">233,600,000<small>원</small></td>
+      <td class="c-base"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-fin"><span class="pct dim">-</span><span class="amt dim">-</span></td>
+      <td class="c-real">233,600,000<small>원</small></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ===== INLINE CTA: 권혁 과장 ===== -->
+<section class="bd-cta">
+  <div class="bd-cta-card">
+    <div class="bd-cta-portrait">
+      <img src="IMG_4590.jpg" alt="권혁 과장">
+      <div class="bd-cta-portrait-caption">
+        <span class="small">EXPERT PARTNER</span>
+        <span class="name">권혁 과장</span>
+      </div>
+    </div>
+    <div class="bd-cta-body">
+      <div class="bd-cta-eyebrow">전략적 구매 자문</div>
+      <h2 class="bd-cta-title">단순한 판매가 아닌<br><b>완벽한 자산 관리</b>를 약속합니다.</h2>
+      <p class="bd-cta-desc">
+        10년의 프리미엄 세일즈 내공과 700대 출고의 신뢰.<br>
+        차량의 품격에 걸맞은 정교한 금융 설계와 출고 후 VIP 우선 예약(패스트 트랙) 관리를 통해 당신의 가장 든든한 '차량 비서'가 되어드리겠습니다.
+      </p>
+      
+      <div class="bd-cta-meta">
+        <div class="bd-cta-meta-item">
+          <span class="bd-cta-meta-num">700+</span>
+          <span class="bd-cta-meta-label">누적 출고 고객</span>
+        </div>
+        <div class="bd-cta-meta-item">
+          <span class="bd-cta-meta-num">10 Years</span>
+          <span class="bd-cta-meta-label">프리미엄 세일즈 경력</span>
+        </div>
+        <div class="bd-cta-meta-item">
+          <span class="bd-cta-meta-num">Full-Shop</span>
+          <span class="bd-cta-meta-label">금천 멀티센터 소속</span>
+        </div>
+      </div>
+      
+      <div class="bd-cta-buttons">
+        <a href="tel:010-9081-0058" class="bd-cta-btn primary">전화 상담 예약</a>
+        <a href="sms:010-9081-0058" class="bd-cta-btn ghost">문자 문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact">
+  <div class="co-badge">KCC AUTO GEUMCHEON</div>
+  <div class="co-name">메르세데스-벤츠 금천 멀티센터</div>
+  <div class="co-title">최고의 차량에 걸맞은 최고의 관리를 약속합니다.</div>
+  
+  <div class="co-grid">
+    <a href="tel:010-9081-0058" class="co-card">
+      <div class="co-card-icon">📱</div>
+      <div class="co-card-label">DIRECT CALL</div>
+      <div class="co-card-val">010-9081-0058</div>
+    </a>
+    <div class="co-card">
+      <div class="co-card-icon">👨‍💼</div>
+      <div class="co-card-label">EXPERT</div>
+      <div class="co-card-val">권혁 과장</div>
+    </div>
+    <div class="co-card">
+      <div class="co-card-icon">🏢</div>
+      <div class="co-card-label">LOCATION</div>
+      <div class="co-card-val">금천 멀티센터 (전시장 / 서비스센터 통합)</div>
+    </div>
+  </div>
+</section>
+
+<!-- 랜딩페이지 복귀 버튼 -->
+<div style="text-align:center; margin-top:48px; padding-bottom:24px;">
+  <a href="https://khyeok86.github.io/BENZ-KWON/"
+     style="display:inline-flex; align-items:center; gap:8px;
+            color:#c9a96e; border:1px solid #8a7a50;
+            padding:12px 28px; border-radius:40px; font-family:'MBK CorpoA', sans-serif;
+            font-size:.85rem; text-decoration:none; letter-spacing:.05em; transition:all .3s;">
+    ← 권혁 과장 메인으로 돌아가기
+  </a>
+</div>
+
+<!-- 플로팅 카카오톡 상담 버튼 -->
+<a href="sms:010-9081-0058" class="float-kakao">
+  <div class="float-kakao-icon">💬</div>
+  권혁 과장에게 문의하기
+</a>
 
 </body>
 </html>
